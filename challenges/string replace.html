@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function cleanText(text){
+            text = text.replace(/javascript/gi, "********")
+            text = text.replace(/php/gi, "********")
+            text = text.replace(/java/gi, "********")
+            text = text.replace(/html/gi, "*".repeat(4))
+            text = text.replace(/css/gi, "********")
+            
+            return text
+        }
+
+        const content = 
+        ` programowanie zacząłem od HTML, następnie poznałem CSS/JavaScript obecnie skupiam sie, na
+        Vue.js`
+
+        let newContent = cleanText(content)
+        console.log(newContent)
+    </script>
+</body>
+</html>
