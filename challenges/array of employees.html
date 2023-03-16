@@ -7,13 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        let company = {
-            name: "Example",
-            street: "Wilcza",
-            city: "Wawa",
-            employees: []
-        }
-    </script>
+
+<script>
+    const company = {
+        name: "Example",
+        street: "Wilcza",
+        city: "Wawa",
+        employees: []
+    }
+
+    function addEmployee(name, email, job){
+        const employee = {
+            username: name,
+            email: email,
+            job: job
+    }
+
+    company.employees.push(employee)
+    }
+
+    addEmployee("Asia","asia@example.pl", "programmer")
+    addEmployee("Asia","asia@example.pl", "programmer")
+    addEmployee("Asia","asia@example.pl", "programmer")
+
+    console.log(company)
+  
+</script>
 </body>
 </html>
