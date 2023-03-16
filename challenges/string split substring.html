@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function getEmailParts(email){
+            const monkeyInd = email.indexOf("@")
+            if (monkeyInd === -1) return null
+
+            const dotInd = email.lastIndexOf(".")
+            if (dotInd === -1) return null
+
+            const parts = email.split("@")
+
+            const name = email.substring(0,monkeyInd)
+
+            const domainLen = dotInd - monkeyInd - 1
+            const domain = email.substr(monkeyInd + 1,)
+
+            const extLen = email.length - dotInd -1;
+            const domainExt = email.slice(-extLen)
+
+            return {
+                name: name,
+                parts: parts,
+                domaim: domain,
+                domainExt: domainExt,
+            }
+        }
+
+        console.log(getEmailParts("patryk@wp.pl"))
+        console.log(getEmailParts("jpis@wp.pl"))
+    </script>
+</body>
+</html>
