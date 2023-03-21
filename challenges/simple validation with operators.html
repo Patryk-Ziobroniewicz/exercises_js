@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let article = {
+            date: new Date(2030, 12, 01),
+            title:  1 ,
+            content: 2,
+            tags: ["blog", "lifestyle"],
+            version: 1
+        }
+
+        function validateArticle(art) {
+            if ( "title" in art === false || typeof art.title !== "string"){ console.log("Nieprawidłowy title w article")
+                return false
+            } 
+            }
+
+        }
+
+        console.log(validateArticle(article))
+    </script>
+</body>
+</html>

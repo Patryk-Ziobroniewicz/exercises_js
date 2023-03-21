@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function recruitProgrammer(email, level, yearsExp, languages){
+            if ( level != "mid") {
+                console.log("Koniec rektrutacji, nie jest midem")
+                return
+            }
+
+        
+            let jsExp = false
+            let tsExp = false
+            if (languages.indexOf("JavaScript") >= 0) jsExp = true
+            if (languages.indexOf("TypeScript") >= 0) jsExp = true
+
+            if (jsExp || tsExp == true) {
+                // zna js lub ts
+                if (yearsExp >= 1 && yearsExp < 6){
+                    console.log(email, "spełnia wszystkie wymagania") 
+                    return true
+                }
+            }
+
+            return false
+
+        }
+
+        recruitProgrammer("patryk@wp.pl", "mid", 4, ["JavaScrpit", "TypeScript"])
+
+        recruitProgrammer("bob@wp.pl", "senior", 3, ["JavaScrpit", "TypeScript"])
+    </script>
+</body>
+</html>
