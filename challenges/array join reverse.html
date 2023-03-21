@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const names = ["Bulion", "Chujlon", "srujlon", "Mars"]
+
+        function combineNames(namesArr, sign){
+        const newArr = namesArr.reverse();
+        return newArr.join(sign);
+    }
+
+    const combinedData = combineNames(names, "|");
+
+    console.log(combinedData)
+    
+    console.log(combinedData.split("|"))
+    
+</script>
+</body>
+</html>
