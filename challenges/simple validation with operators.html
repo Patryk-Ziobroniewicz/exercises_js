@@ -10,21 +10,44 @@
     <script>
         let article = {
             date: new Date(2030, 12, 01),
-            title:  1 ,
-            content: 2,
+            title:  "tytuł" ,
+            content: "string",
             tags: ["blog", "lifestyle"],
             version: 1
         }
 
         function validateArticle(art) {
-            if ( "title" in art === false || typeof art.title !== "string"){ console.log("Nieprawidłowy title w article")
+            if ( "title" in art === false || typeof art.title !== "string"){ 
+                console.log("Nieprawidłowy title w article")
                 return false
             } 
+
+            if (! "content" in art || typeof art.content !== "string"){
+                console.log("Nieprawidłowy content w watricle")
+                return false
             }
 
-        }
+            if (! "tags" in art || !Array.isArray(art.tags)) {
+                console.log("Nieprawidłowa tablica tags")
+                return false
+            }
 
-        console.log(validateArticle(article))
+            if (! "version" in art || typeof art.version !== "number"){
+                console.log("Problem z wersją artykułu");
+                return false;
+            }
+
+            if (art.version <= 0) {
+                console.log("Problem z wersją artykułu")
+                return false
+            }
+
+            return true
+            }
+
+        
+
+   console.log(validateArticle(article))
     </script>
 </body>
 </html>
