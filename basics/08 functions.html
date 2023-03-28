@@ -37,8 +37,38 @@
 
         console.log(calculateInvestmentResult(2200,0.08))
         
+        let add10 = function (num) {
+            return num + 10;
+        }
+
+        console.log(add10(15))
 
 
+        add10 = function (num) {
+            let sum = num + 10
+            console.log(sum)
+            return sum
+        }
+
+        const sum = add10(20)
+        console.log(sum)
+
+        function downloadFile(fileName, onComplete, onError) {
+            if (fileName.length > 5) {
+                onComplete("sucess")
+            } else {
+                onError("Error!")
+            }
+        }
+
+        downloadFile("3.txt",
+                function (str) {
+                    console.log("Oncomplete:", str)
+                },
+                function (str) {
+                    console.log("Error:", str)
+                }
+                )
     </script>
 </body>
 </html>
